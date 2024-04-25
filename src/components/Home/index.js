@@ -25,14 +25,15 @@ const Home = () =>(
                     <div className="filters-recommendations-container">
                         <p className={`totalItems ${text}`}>3423 ITEMS</p>
                         <Filters/>
-                    </div>
                         <Recommendations/>
+                    </div>
                 </div>
                 <Shop/>
                 </div>
             )
         }}
     </ThemeContext.Consumer>
+
 )
 
 export default Home

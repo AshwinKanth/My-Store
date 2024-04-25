@@ -4,7 +4,7 @@ import "./index.css"
 
 
 class ProductDetails extends Component{
-    state = {productData: {}}
+    state = {productData: {},quantity: 1}
 
 
     componentDidMount(){
@@ -48,9 +48,20 @@ class ProductDetails extends Component{
 
     }
 
+    onClickDecrement = () =>{
+        const {quantity} = this.state
+        if (quantity > 1){
+            this.setState(prevState =>({quantity: prevState.quantity-1}))
+        }
+    }
+
+    onClickIncrement = () =>{
+        this.setState(prevState => ({quantity: prevState.quantity + 1}))
+    }
+
 
     renderProductDetails = () =>{
-        const {productData} = this.state
+        const {productData,quantity} = this.state
         const {title,price,description,image,rating,category,count} = productData
 
         const productsCount = count > 150 ? "Hurry!! free delivery" : "Only few left"
@@ -71,9 +82,9 @@ class ProductDetails extends Component{
                     <p className="count">{`(${count}) ${productsCount}`}</p>
                     <p className="productDescription">{description}</p>
                     <div className="count-container">
-                        <button className="button"><BsDashSquare className="quantity-icon"/></button>
-                            <p className="itemCount">0</p>
-                        <button className="button"><BsPlusSquare className="quantity-icon"/></button>
+                        <button className="button" onClick={this.onClickDecrement}><BsDashSquare className="quantity-icon"/></button>
+                            <p className="itemCount">{quantity}</p>
+                        <button className="button" onClick={this.onClickIncrement}><BsPlusSquare className="quantity-icon"/></button>
                     </div>
                     <button className="add-cart-button" type="button">
                     ADD TO CART

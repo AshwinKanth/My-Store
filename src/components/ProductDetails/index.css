@@ -8,6 +8,12 @@
     align-items: center;
 }
 
+@media screen and (max-width: 768px){
+    .productDetailsItem-container{
+        flex-direction: column;
+    }
+}
+
 .productDetailsImage{
     height: 100%;
     width: 400px;

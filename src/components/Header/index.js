@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Link} from "react-router-dom"
 import {Navbar,Container,Nav} from "react-bootstrap"
 import ThemeContext  from "../../context/ThemeContext";
 
@@ -55,7 +55,9 @@ const Header = () =>(
                         <h1 className={`headerHeading ${text}`}>LOGO</h1>
                         <div>
                             <IoSearch className={`icons ${iconsColor}`}/>
+                            <Link to="/favourite" className='navLink'>
                             <GrFavorite className={`icons ${iconsColor}`}/>
+                            </Link>
                             <TbShoppingBag className={`icons ${iconsColor}`}/>
                             <CgProfile  className={`icons mobileIcon ${iconsColor}`}/>
                             <button className="button icons" onClick={onChangeTheme}>
@@ -98,7 +100,6 @@ const Header = () =>(
         }}
         
     </ThemeContext.Consumer>
-
     
 )
 
