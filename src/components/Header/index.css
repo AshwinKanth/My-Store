@@ -1,0 +1,161 @@
+.header-container{
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+}
+
+.topHeader-conatiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 35px;
+    height: 35px;
+}
+
+.nav-logo-container{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+@media screen and (max-width: 768px){
+    .logo{
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        margin-left: 80px;
+    }
+}
+
+.headerHeading{
+    font-size: 23px;
+    padding-left: 100px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px){
+    .headerHeading{
+        font-size: 20px;
+        padding-left: 0px;
+    }
+}
+
+.icons{
+    width: 30px;
+    height: 30px;
+    padding-right: 12px;
+}
+
+.button{
+    background-color: transparent;
+    outline: none;
+    border-width: 0px;
+}
+
+@media screen and (max-width: 768px){
+    .icons{
+        width: 28px;
+        height: 28px;
+        padding-right: 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .mobileIcon{
+        display: none;
+    }
+}
+
+.option{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.select{
+    font-size: 13px;
+    font-weight: bold;
+    outline: none;
+    border-width: 0px;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+@media screen and (max-width: 768px){
+    .small-nav-container{
+        justify-content: flex-start;
+        font-size: 11px;
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 967px){
+    .small-nav-container{
+        display: none;
+        
+    }
+}
+
+@media screen and (max-width: 968px){
+    .nav-container{
+        justify-content: flex-start;
+        display: none;
+    }
+}
+
+
+.navItem{
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.navLink{
+    text-decoration:none;
+}
+
+.nav-bg-body{
+    background-color: transparent;
+    padding-top: 0px;
+}
+
+.bgDark{
+    background-color: #000000;
+}
+
+.bgLight{
+    background-color: #ffffff;
+}
+
+.textDark{
+    color: #ffffff;
+}
+
+.textLight{
+    color: #000000;
+}
+
+.navLinesLight{
+    background-color: #000000;
+}
+
+.navLinesLight{
+    
+    background-color: #0ab3bf;
+}
+
+.lines{
+    padding: 5px;
+    /* background-color: transparent; */
+}
